@@ -1,0 +1,21 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <form class="d-flex" id="search">
+      <input class="form-control me-2" value="{{ request.GET.s }}" type="search" name="s" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+      <a class="btn btn-secondary mx-2" href="{% url 'cars:index' %}">Clear</a>
+    </form>
+    <form class="d-flex">
+      <input type="hidden" name="download" id="download" value="1" />
+      <input  value="{{ request.GET.s }}" type="hidden" name="s">
+      <button type="submit" class="btn btn-dark mx-2">Download List</button>
+    </form>
+  </div>
+</nav>
+{% if request.GET.s %}
+<div class="container-fluid my-3">
+  <div class="alert alert-info" role="alert">
+    Search results for: <strong>{{ request.GET.s }}</strong>
+  </div>
+</div>
+{% endif %}

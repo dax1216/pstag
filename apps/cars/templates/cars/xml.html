@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+    <cars>
+{% for car in cars %}
+        <car>
+            <name>{{ car.name}}</name>
+            <length>{{car.length}}</length>
+            <weight>{{car.weight}}</weight>
+            <velocity>{{car.velocity}}</velocity>
+            <color>{{car.color}}</color>
+        </car>
+{% endfor %}
+</cars>

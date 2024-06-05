@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+    <cars>
+        <car>
+            <name>Mitsubishi Lancer</name>
+            <length>170.00</length>
+            <weight>220.00</weight>
+            <velocity>200</velocity>
+            <color>Blue</color>
+        </car>
+        <car>
+            <name>Mitsubishi Mirage</name>
+            <length>120.00</length>
+            <weight>200.00</weight>
+            <velocity>160</velocity>
+            <color>Red</color>
+        </car>
+    </cars>

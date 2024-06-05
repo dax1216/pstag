@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    {% include "snippets/search.html" %}
+    <table class="table table-striped my-3">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Color</th>
+                <th scope="col">Length (inches)</th>
+                <th scope="col">Weight (kg)</th>
+                <th scope="col">Velocity (km/h)</th>
+            </tr>
+        </thead>
+        <tbody>
+{% if not object_list %}
+            <tr>
+                <td colspan="5">No items found.</td>
+            </tr>
+{% else %}
+    {% for object in object_list %}
+            <tr>
+                <td>{{ object.name }}</td>
+                <td>{{ object.color }}</td>
+                <td>{{ object.length }}</td>
+                <td>{{ object.weight }}</td>
+                <td>{{ object.velocity }}</td>
+            </tr>
+    {% endfor %}
+{% endif %}
+        </tbody>
+    </table>
+    {% include "snippets/pagination.html" %}
+</div>
+{% endblock content %}

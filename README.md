@@ -9,5 +9,6 @@ pip install -r requirements.txt
 ./manage.py createsuperuser
 ./manage.py runserver
 ```
-Make sure to create a copy of .env-sample and rename to .env
-Change values in .env to match your local environment
+## More instructions
+* Make sure to create a copy of .env-sample and rename to .env
+* Change values in .env to match your local environment
